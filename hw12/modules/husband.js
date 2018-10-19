@@ -15,16 +15,19 @@
 
 class Husband {
 
-    constructor() {
-        this.salary = 0;
-        this.friends = [];
-        this.drunk = false;
-    }
+    let salary = 0;
+    let friends = [];
+    let drunk = false;
+    // constructor() {
+    // }
+
     getSalary() {
         return `Actual salary is ${this.salary}.\n`;
     }
-    setSalary(salary) {
-        this.salary = salary;
+
+    addSalary(increment = 0.0) {
+        this.salary += increment;
+        return `Actual salary is ${this.salary}.\n`;
     }
     
     getFriends()  {
@@ -35,15 +38,9 @@ class Husband {
         // return `Actual the friend list contains ${list}.\n`;
         return `Actual the friend list contains ${this.friends}.\n`;
     }
-    setFriends(friends)  {
-        this.friends = friends.slice();
-    }
     
     isDrunk() {
         return `Is drunk? -- ${this.drunk}\n`;
-    }
-    setDrunk(drunk) {
-        this.drunk = drunk;
     }
     
 }
