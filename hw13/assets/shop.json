@@ -1,0 +1,82 @@
+{
+    "object" : "shop",
+    "sections" : [
+        {
+            "Fruits_Vegetables" : [
+                { 
+                    "showcase_1" : [
+                        { 
+                            "apples" : [
+                                {
+                                    "title"  : "golden",
+                                    "weight" : "20 kg",
+                                    "price"  : "25 hrn"
+                                },
+                                {
+                                    "title"  : "semerenko",
+                                    "weight" : "10 kg",
+                                    "price"  : "15 hrn"
+                                }
+                            ]
+                        },
+                        {
+                            "oranges" : [
+                                {
+                                    "title"  : "class 1",
+                                    "weight" : "25 kg",
+                                    "price"  : "40 hrn"
+                                },
+                                {
+                                    "title"  : "class 2",
+                                    "weight" : "30 kg",
+                                    "price"  : "55 hrn"
+                                }
+
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "showcase_2" : [
+                        {
+                            "mango" : [
+                                {
+                                    "title"  : "big",
+                                    "weight" : "20 items",
+                                    "price"  : "50 hrn"
+                                },
+                                {
+                                    "title"  : "middle",
+                                    "weight" : "25 items",
+                                    "price"  : "40 hrn"
+                                },
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Meat_Fish" : [
+                {
+                    "showcase_1" : [
+                        {
+                            "herring" : [
+                                {
+                                    "title"  : "finnish",
+                                    "weight" : "30 kg",
+                                    "price"  : "80 hrn"
+                                },
+                                {
+                                    "title"  : "norvegian",
+                                    "weight" : "10 boxes",
+                                    "price"  : "40 hrn"
+                                }                            
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
