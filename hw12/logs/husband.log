@@ -1,5 +1,5 @@
 new husband log.
-Status:: name=John, drunk=false, salary=0, friends=.
-Status:: name=John, drunk=false, salary=10, friends=.
-Status:: name=John, drunk=true, salary=10, friends=Bill.
-Status:: name=John, drunk=false, salary=20, friends=Bill.
+Status:: name=John, drunk=true, salary=50, friends=Boris.
+Status:: name=John, drunk=false, salary=60, friends=Boris.
+Status:: name=John, drunk=true, salary=60, friends=Boris,Bill.
+Status:: name=John, drunk=false, salary=70, friends=Boris,Bill.

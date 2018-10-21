@@ -1,5 +1,5 @@
 
-const ClassHusband = require("./modules/husband").Husband;
+const ClassHusband = require("./modules/husband_2").Husband;
 const logFile = "./logs/husband.log";
 const fs = require("fs");
 
