@@ -4,7 +4,7 @@
 .
 - зарплата (тип number)
 - друзья (в виде массива имён)
-- трезвый (тип bulean)
+- трезвый (тип boolean)
 .
 Реализовать "Паттерн Модуль" и добавить экспорт функций:
 - получитьЗарплату
@@ -42,7 +42,9 @@ class Husband {
     isDrunk() {
         return `Is drunk? -- ${this.drunk}\n`;
     }
-    
+
+    inviteEvent() {
+    }
 }
 
 exports.NewHusband = new Husband();
