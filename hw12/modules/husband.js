@@ -15,36 +15,46 @@
 
 class Husband {
 
-    let salary = 0;
-    let friends = [];
-    let drunk = false;
-    // constructor() {
-    // }
-
-    getSalary() {
-        return `Actual salary is ${this.salary}.\n`;
-    }
-
-    addSalary(increment = 0.0) {
-        this.salary += increment;
-        return `Actual salary is ${this.salary}.\n`;
-    }
+    constructor(name) {
+        let salary = 0;
+        let friends = [];
+        let drunk = false;
     
-    getFriends()  {
-        // let list = "";
-        // for (let item of this.friends) {
-        //     list += String(item) + " ";
-        // }
-        // return `Actual the friend list contains ${list}.\n`;
-        return `Actual the friend list contains ${this.friends}.\n`;
-    }
-    
-    isDrunk() {
-        return `Is drunk? -- ${this.drunk}\n`;
-    }
+        // this.setName = function(name) { _name = name; }
+        // this.getSa = function() { return _name; }
+        this.name = name;
 
-    inviteEvent() {
+        this.getStatus = () => {
+            return `Status:: name=${name}, drunk=${drunk}, salary=${salary}, friends=${friends}.`;
+        }
+        
+        this.getSalary = () => {
+            return `Actual salary is ${salary}.`;
+        }
+
+        this.addSalary = (increment=0.0) => {
+            salary += increment;
+            return `Actual salary is ${salary}.`;
+        }
+
+        this.getFriends = () => {
+            return `Actual the friend list contains ${friends}.`;
+        }
+        
+        this.isDrunk = () => {
+            return `Is drunk? -- ${drunk}\n`;
+        }
+    
+        this.workday = () => {
+            drunk = false;
+            salary += 10;
+        }
+
+        this.weekend = (guest='') => {
+            drunk = true;
+            friends.push(guest);
+        }    
     }
 }
 
-exports.NewHusband = new Husband();
+module.exports.Husband = Husband;

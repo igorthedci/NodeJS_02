@@ -1,4 +1,5 @@
-Status of the husband:
-Actual salary is 1000.
-Actual the friend list contains Bob,John,Ana.
-Is drunk? -- true
+new husband log.
+Status:: name=John, drunk=false, salary=0, friends=.
+Status:: name=John, drunk=false, salary=10, friends=.
+Status:: name=John, drunk=true, salary=10, friends=Bill.
+Status:: name=John, drunk=false, salary=20, friends=Bill.

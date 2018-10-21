@@ -1,30 +1,44 @@
 
-const aHusband = require("./modules/husband").NewHusband;
-const fs = require("fs");
+const ClassHusband = require("./modules/husband").Husband;
 const logFile = "./logs/husband.log";
+const fs = require("fs");
 
-aHusband.setSalary(1000);
-//console.log(aHusband.getSalary());
-aHusband.setFriends(['Bob', 'John', 'Ana']);
-//console.log(aHusband.getFriends());
-aHusband.setDrunk(true);
-//console.log(aHusband.getDrunk());
+let aHusbandFirst = new ClassHusband('Bob');
+let aHusbandSecond = new ClassHusband('John');
+// aHusband.setSalary(1000);
 
+console.log(aHusbandFirst.getStatus());
+console.log(aHusbandSecond.getStatus());
+aHusbandFirst.workday();
+aHusbandFirst.workday();
+aHusbandFirst.workday();
+aHusbandFirst.workday();
+aHusbandFirst.workday();
+console.log(aHusbandFirst.getStatus());
+console.log(aHusbandSecond.getStatus());
+aHusbandFirst.weekend('Boris');
+console.log(aHusbandFirst.getStatus());
+console.log(aHusbandSecond.getStatus());
 
 try {
 
+    console.log('Creating new log file...');
+    fs.writeFileSync(logFile, "new husband log." + '\n');
     console.log('Logging husband status...');
-    fs.writeFileSync(logFile, 'Status of the husband:\n');
-    console.log('Logging husband salary...');
-    fs.appendFileSync(logFile, aHusband.getSalary());
-    console.log('Logging husband friends...');
-    fs.appendFileSync(logFile, aHusband.getFriends());
-    console.log('Logging drunk status...');
-    fs.appendFileSync(logFile, aHusband.isDrunk());
+    fs.appendFileSync(logFile, aHusbandSecond.getStatus() + '\n');
+    console.log('Logging husband workday...');
+    aHusbandSecond.workday();
+    fs.appendFileSync(logFile, aHusbandSecond.getStatus() + '\n');
+    console.log('Logging husband weekend...');
+    aHusbandSecond.weekend('Bill');
+    fs.appendFileSync(logFile, aHusbandSecond.getStatus() + '\n');
+    console.log('Logging husband new workday...');
+    aHusbandSecond.workday();
+    fs.appendFileSync(logFile, aHusbandSecond.getStatus() + '\n');
     console.log('Log is completed.');
 
 } catch (error) {
     console.log('error');
+} finally {
+    console.log('Program completed.');
 }
-
-console.log('Program completed.');
